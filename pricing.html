@@ -7,18 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Logo样式 */
-.navbar-brand {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #0d6efd, #6610f2);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: 0.5px;
-}
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.5px;
+        }
         body { font-family: Arial, sans-serif; }
         .pricing-section { padding: 60px 0; }
-        .pricing-card { border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .pricing-card { border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 10px; }
         .price-highlight { color: #0d6efd; font-weight: bold; }
         footer { background: #343a40; color: #fff; padding: 40px 0; margin-top: 60px; }
         .footer-link { color: #fff; text-decoration: underline; }
@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-   <!-- 导航栏（新增Cases选项，全站统一） -->
+   <!-- 导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">WanyuSoft</a>
@@ -39,61 +39,79 @@
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="our-services.html">Our Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="our-cases.html">Our Cases</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-    <!-- 定价核心内容 -->
-    <section class="pricing-section">
-        <div class="container">
-            <h1 class="text-center mb-4">Our Pricing Model</h1>
-            <p class="text-center lead mb-5">Transparent, flexible pricing tailored to your project requirements</p>
-            
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card pricing-card p-5 text-center">
-                        <h3 class="h4 mb-4">Hourly/Monthly Engagement</h3>
-                        <p class="mb-3">Our professional development team offers flexible engagement models:</p>
-                        <p class="h3 mb-4 price-highlight">Up to $2000 per person per month</p>
-                        <p class="text-muted mb-4">
-                            The final price depends on factors including:
-                        </p>
-                        <ul class="list-unstyled text-start mb-5">
-                            <li class="mb-2">✓ Project complexity and scope</li>
-                            <li class="mb-2">✓ Required technical expertise (AI/development)</li>
-                            <li class="mb-2">✓ Project timeline and delivery urgency</li>
-                            <li class="mb-2">✓ Post-development support requirements</li>
-                        </ul>
-                        <p class="mb-4">We provide detailed, customized quotes after understanding your specific needs.</p>
-                        <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
-                    </div>
+<!-- 定价核心内容 -->
+<section class="pricing-section">
+    <div class="container">
+        <h1 class="text-center mb-4">Our Pricing Model</h1>
+        <p class="text-center lead mb-5">Transparent, flexible pricing tailored to your project requirements</p>
+        
+        <div class="row justify-content-center g-4">
+            <!-- Dedicated Developer -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pricing-card p-4 text-center h-100">
+                    <h3 class="h5 mb-3">Dedicated Developer</h3>
+                    <p class="h3 mb-3 price-highlight">$2500 – $3500 / month</p>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li>• Full-time dedicated developer</li>
+                        <li>• Java, Web, AI expertise</li>
+                        <li>• Flexible engagement</li>
+                        <li>• High-quality and reliable team</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="text-center mt-5">
-                <h4 class="h5 mb-3">Why Our Pricing is Competitive</h4>
-                <p class="text-muted">
-                    We balance high-quality technical delivery with cost-effectiveness, 
-                    ensuring you get maximum value for your investment.
-                </p>
+            <!-- Small Team -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pricing-card p-4 text-center h-100">
+                    <h3 class="h5 mb-3">Small Team (2-3 Developers)</h3>
+                    <p class="h3 mb-3 price-highlight">$5000 – $7000 / month</p>
+                    <ul class="list-unstyled text-start mb-4">
+                        <li>• Dedicated small team</li>
+                        <li>• Full project coverage</li>
+                        <li>• Ideal for medium-scale projects</li>
+                        <li>• Proven experience and reliability</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- 页脚 -->
-    <footer>
-        <div class="container text-center">
-            <p class="mb-2">© 2026 WanyuSoft. All rights reserved.</p>
-            <p>
-                Contact: WhatsApp <a href="https://wa.me/8618732162188" class="footer-link">+86 18732162188</a> | 
-                LinkedIn <a href="https://www.linkedin.com/in/haileli" class="footer-link" target="_blank">haileli</a>
+        <div class="text-center mt-5">
+            <p class="mb-3"><strong>Pricing depends on:</strong></p>
+            <ul class="list-unstyled mb-4">
+                <li>• Project scope & complexity</li>
+                <li>• Required expertise (e.g., AI, backend, web)</li>
+                <li>• Timeline & support requirements</li>
+            </ul>
+            <p class="mb-4">Contact us for a <strong>free consultation</strong> and detailed quote.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="h5 mb-3">Why Our Pricing is Competitive</h4>
+            <p class="text-muted">
+                We provide high-quality software development at cost-effective rates, ensuring maximum value for your investment.
             </p>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 页脚 -->
+<footer>
+    <div class="container text-center">
+        <p class="mb-2">© 2026 WanyuSoft. All rights reserved.</p>
+        <p>
+            Contact: WhatsApp <a href="https://wa.me/8618732162188" class="footer-link">+86 18732162188</a> | 
+            LinkedIn <a href="https://www.linkedin.com/in/haileli" class="footer-link" target="_blank">haileli</a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
