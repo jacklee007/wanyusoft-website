@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanyuSoft - Professional Software Solutions</title>
+    <meta name="description" content="WanyuSoft provides high-quality software development, customization and technical consulting services">
+    <!-- 基础样式（复用bootstrap，保证兼容性） -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        /* Logo样式 */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.5px;
+}
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        /* Logo样式 */
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.5px;
+        }
+        /* 轮播图样式 */
+        .carousel-item {
+            height: 500px; /* 轮播图高度 */
+        }
+        .carousel-item img {
+            height: 100%;
+            object-fit: cover; /* 图片自适应，不拉伸 */
+            filter: brightness(0.7); /* 降低亮度，突出文字 */
+        }
+        .carousel-caption {
+            bottom: 20%;
+            z-index: 10;
+        }
+        .carousel-caption h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-section { background: #f8f9fa; padding: 80px 0; }
+        .feature-card { border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        footer { background: #343a40; color: #fff; padding: 40px 0; margin-top: 60px; }
+        .footer-link { color: #fff; text-decoration: underline; }
+        .footer-link:hover { color: #ddd; }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">WanyuSoft</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="our-services.html">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 新增轮播图模块 -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- 轮播图1：AI智能助手 -->
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/id/1/1920/1080" class="d-block w-100" alt="AI Intelligent Assistant">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>AI Intelligent Assistant Solutions</h2>
+                    <p>Boost your business efficiency with custom AI-powered automation and smart decision-making tools</p>
+                    <a href="our-services.html" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+            <!-- 轮播图2：网站建设 -->
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/180/1920/1080" class="d-block w-100" alt="Website Development">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>High-Performance Website Development</h2>
+                    <p>Responsive, SEO-optimized websites that drive conversions and enhance your brand presence</p>
+                    <a href="our-services.html" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+            <!-- 轮播图3：业务系统开发 -->
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/48/1920/1080" class="d-block w-100" alt="Business System Development">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Custom Business System & App Development</h2>
+                    <p>End-to-end solutions for ERP, CRM and mobile apps tailored to your unique business needs</p>
+                    <a href="our-services.html" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- 核心英雄区 -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">WanyuSoft</h1>
+            <p class="lead mt-3">Professional & Reliable Software Solutions</p>
+            <p class="mb-5">Tailored development, consulting and outsourcing services for global enterprises</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="our-services.html" class="btn btn-primary btn-lg">Our Services</a>
+                <a href="contact.html" class="btn btn-outline-dark btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose WanyuSoft?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card p-4 h-100">
+                        <div class="card-body text-center">
+                            <h3 class="h5 card-title">Custom Development</h3>
+                            <p class="card-text">Tailor-made software for web, mobile & desktop, aligned with your business needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card p-4 h-100">
+                        <div class="card-body text-center">
+                            <h3 class="h5 card-title">Technical Consulting</h3>
+                            <p class="card-text">Expert advice on IT architecture, tech selection & digital transformation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card p-4 h-100">
+                        <div class="card-body text-center">
+                            <h3 class="h5 card-title">Outsourcing Services</h3>
+                            <p class="card-text">Flexible IT talent outsourcing to cut costs & accelerate project delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式快捷区 -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h3 class="mb-4">Get In Touch</h3>
+            <p class="mb-2">WhatsApp: <a href="https://wa.me/8618732162188" class="link-dark">+86 18732162188</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/haileli" class="link-dark" target="_blank">https://www.linkedin.com/in/haileli</a></p>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <p class="mb-2">© 2026 WanyuSoft. All rights reserved.</p>
+                <p>
+                    Contact: WhatsApp <a href="https://wa.me/8618732162188" class="footer-link">+86 18732162188</a> | 
+                    LinkedIn <a href="https://www.linkedin.com/in/haileli" class="footer-link" target="_blank">haileli</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
